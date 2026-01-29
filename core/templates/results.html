@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}Search Results{% endblock %}
+
+{% block content %}
+<section class="results-header card">
+  <div>
+    <h2>Search results</h2>
+    {% if q %}
+      <p class="subtitle">Sorted by relevance using BM25 scoring. {{ doc_count }} results.</p>
+    {% else %}
+      <p class="subtitle">Showing all publications. {{ doc_count }} total.</p>
+    {% endif %}
+  </div>
+
+  <form action="{% url 'search' %}" method="get" class="search-form compact">
+    <div class="search-row">
+      <input type="text" name="q" value="{{ q }}" placeholder="Search by title, author, year, or abstract (leave blank to show all)">
+      <button type="submit">Search</button>
+    </div>
+    <label class="toggle">
+      <input type="checkbox" name="stem" value="1" {% if use_stemming %}checked{% endif %}>
+      Use light stemming for broader matches
+    </label>
+  </form>
+</section>
+
+{% if not has_index %}
+  <div class="warn card">
+    <strong>Index not found.</strong>
+    Run the crawler to build `data/index.json`.
+  </div>
+{% elif not results %}
+  <div class="empty card">
+    <h3>No results</h3>
+    <p>Try different keywords or remove optional stemming.</p>
+  </div>
+{% else %}
+  <div class="results-list">
+    {% for r in results %}
+      <article class="result card" style="--i: {{ forloop.counter0 }}">
+        <div class="result-title">
+          <a href="{{ r.publication_url }}" target="_blank" rel="noopener">{{ r.title }}</a>
+        </div>
+        <div class="meta-row">
+          <span class="meta-pill">Year: {{ r.year|default:"N/A" }}</span>
+          {% if r.score or r.score == 0 %}
+            <span class="meta-pill">Score: {{ r.score }}</span>
+          {% endif %}
+        </div>
+        {% if r.authors %}
+          <div class="meta">Authors: {{ r.authors|join:", " }}</div>
+        {% endif %}
+        {% if r.author_profiles %}
+          <div class="meta">
+            Profiles:
+            {% for p in r.author_profiles %}
+              <a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.name|default:"Profile" }}</a>{% if not forloop.last %}, {% endif %}
+            {% endfor %}
+          </div>
+        {% elif r.author_urls %}
+          <div class="meta">
+            Profiles:
+            {% for url in r.author_urls %}
+              <a href="{{ url }}" target="_blank" rel="noopener">Profile {{ forloop.counter }}</a>{% if not forloop.last %}, {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
+        {% if r.abstract %}
+          <p class="abstract">{{ r.abstract }}</p>
+        {% endif %}
+      </article>
+    {% endfor %}
+  </div>
+{% endif %}
+{% endblock %}

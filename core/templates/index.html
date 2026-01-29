@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Search{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <div class="hero-card card">
+    <div class="eyebrow">Coventry University</div>
+    <h2>Search Research Publications</h2>
+    <p class="hero-subtitle">
+      Explore titles, authors, years, and abstracts collected from the CU ICS Research Centre.
+    </p>
+
+    <form action="{% url 'search' %}" method="get" class="search-form">
+      <div class="search-row">
+        <input type="text" name="q" placeholder="Search by title, author, year, or abstract (leave blank to show all)">
+        <button type="submit">Search</button>
+      </div>
+      <label class="toggle">
+        <input type="checkbox" name="stem" value="1">
+        Use light stemming for broader matches
+      </label>
+    </form>
+  </div>
+
+</section>
+{% endblock %}

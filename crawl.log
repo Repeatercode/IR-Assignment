@@ -1,0 +1,26 @@
+Crawl finished.
+Publications stored: 41
+Saved: /home/sajan/Music/Information-retrieval-main/data/publications.jsonl
+Saved: /home/sajan/Music/Information-retrieval-main/data/index.json
+2026-01-21 20:11:54,956 [WARNING] Fetch failed: https://pureportal.coventry.ac.uk/en/publications/
+2026-01-21 20:12:17,286 [WARNING] Fetch failed: https://pureportal.coventry.ac.uk/en/organisations/
+2026-01-21 20:12:22,345 [WARNING] Fetch failed: https://pureportal.coventry.ac.uk/en/persons/
+2026-01-21 20:12:39,770 [WARNING] Fetch failed: https://pureportal.coventry.ac.uk/en/organisations/ics-research-centre-for-computational-science-and-mathematical-mo/publications/
+2026-01-21 20:12:44,847 [WARNING] Fetch failed: https://pureportal.coventry.ac.uk/en/organisations/ics-research-centre-for-computational-science-and-mathematical-mo/persons/
+2026-01-21 20:12:49,913 [WARNING] Fetch failed: https://pureportal.coventry.ac.uk/en/organisations/ics-research-centre-for-computational-science-and-mathematical-mo/projects/
+2026-01-21 20:12:54,980 [WARNING] Fetch failed: https://pureportal.coventry.ac.uk/en/organisations/ics-research-centre-for-computational-science-and-mathematical-mo/activities/
+2026-01-21 20:13:00,049 [WARNING] Fetch failed: https://pureportal.coventry.ac.uk/en/organisations/ics-research-centre-for-computational-science-and-mathematical-mo/prizes/
+2026-01-21 20:13:05,505 [WARNING] Fetch failed: https://pureportal.coventry.ac.uk/en/organisations/ics-research-centre-for-computational-science-and-mathematical-mo/studentTheses/
+2026-01-21 20:13:10,585 [WARNING] Fetch failed: https://pureportal.coventry.ac.uk/en/organisations/ics-research-centre-for-computational-science-and-mathematical-mo/clippings/
+2026-01-21 20:13:15,733 [WARNING] Fetch failed: https://pureportal.coventry.ac.uk/en/organisations/ics-research-centre-for-computational-science-and-mathematical-mo/publications/?type=%2Fdk%2Fatira%2Fpure%2Fresearchoutput%2Fresearchoutputtypes%2Fcontributiontojournal%2Farticle
+2026-01-21 20:13:21,093 [WARNING] Fetch failed: https://pureportal.coventry.ac.uk/en/organisations/ics-research-centre-for-computational-science-and-mathematical-mo/publications/?type=%2Fdk%2Fatira%2Fpure%2Fresearchoutput%2Fresearchoutputtypes%2Fcontributiontobookanthology%2Fconference
+2026-01-21 20:13:26,161 [WARNING] Fetch failed: https://pureportal.coventry.ac.uk/en/organisations/ics-research-centre-for-computational-science-and-mathematical-mo/publications/?type=%2Fdk%2Fatira%2Fpure%2Fresearchoutput%2Fresearchoutputtypes%2Fcontributiontobookanthology%2Fchapter
+2026-01-21 20:13:31,227 [WARNING] Fetch failed: https://pureportal.coventry.ac.uk/en/organisations/ics-research-centre-for-computational-science-and-mathematical-mo/publications/?type=%2Fdk%2Fatira%2Fpure%2Fresearchoutput%2Fresearchoutputtypes%2Fcontributiontojournal%2Fsystematicreview
+2026-01-21 20:13:36,661 [WARNING] Fetch failed: https://pureportal.coventry.ac.uk/en/organisations/ics-research-centre-for-computational-science-and-mathematical-mo/publications/?type=%2Fdk%2Fatira%2Fpure%2Fresearchoutput%2Fresearchoutputtypes%2Fcontributiontoconference%2Fpaper
+2026-01-21 20:13:42,193 [WARNING] Fetch failed: https://pureportal.coventry.ac.uk/en/organisations/ics-research-centre-for-computational-science-and-mathematical-mo/publications/?type=%2Fdk%2Fatira%2Fpure%2Fresearchoutput%2Fresearchoutputtypes%2Fbookanthology%2Fcommissioned
+2026-01-21 20:16:08,202 [WARNING] Fetch failed: https://pureportal.coventry.ac.uk/en/publications/
+2026-01-21 20:16:31,053 [WARNING] Fetch failed: https://pureportal.coventry.ac.uk/en/organisations/
+2026-01-21 20:16:36,126 [WARNING] Fetch failed: https://pureportal.coventry.ac.uk/en/persons/
+2026-01-21 20:16:53,385 [WARNING] Fetch failed: https://pureportal.coventry.ac.uk/en/organisations/ics-research-centre-for-computational-science-and-mathematical-mo/publications/
+2026-01-21 20:16:58,524 [WARNING] Fetch failed: https://pureportal.coventry.ac.uk/en/organisations/ics-research-centre-for-computational-science-and-mathematical-mo/persons/
+2026-01-21 20:17:03,585 [WARNING] Fetch failed: https://pureportal.coventry.ac.uk/en/organisations/ics-research-centre-for-computational-science-and-mathematical-mo/projects/
