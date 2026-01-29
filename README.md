@@ -73,8 +73,4 @@ Weekly crawl scripts:
 
 Crawler defaults are in `search_engine/config.py` (user-agent, delay, max pages).
 
-## Notes
-- The crawler follows `robots.txt` and uses a delay between requests.
-- Publications are filtered to the ICS organisation page and/or author profiles discovered from that page.
-- Search results include author profile links when available.
-- If you change the dataset or crawl again, rebuild the index for updated results.
+
