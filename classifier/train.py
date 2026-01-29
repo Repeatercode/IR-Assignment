@@ -6,7 +6,8 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics import classification_report
 from sklearn.model_selection import train_test_split
-from sklearn.naive_bayes import MultinomialNB
+from sklearn.naive_bayes import ComplementNB
+from sklearn.utils.class_weight import compute_class_weight
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 DATASET_PATH = BASE_DIR / "data" / "news_dataset.csv"
@@ -26,11 +27,23 @@ def main():
         X, y, test_size=0.2, random_state=42, stratify=y
     )
 
-    vectorizer = TfidfVectorizer(lowercase=True, stop_words="english", ngram_range=(1, 2))
+    vectorizer = TfidfVectorizer(
+        lowercase=True,
+        stop_words="english",
+        ngram_range=(1, 2),
+        sublinear_tf=True,
+        max_df=0.95,
+        strip_accents="unicode",
+    )
     X_train_vec = vectorizer.fit_transform(X_train)
 
-    classifier = MultinomialNB()
-    classifier.fit(X_train_vec, y_train)
+    classes = np.unique(y_train)
+    class_weights = compute_class_weight(class_weight="balanced", classes=classes, y=y_train)
+    class_weight_map = dict(zip(classes, class_weights))
+    sample_weight = np.array([class_weight_map[label] for label in y_train])
+
+    classifier = ComplementNB()
+    classifier.fit(X_train_vec, y_train, sample_weight=sample_weight)
 
     X_test_vec = vectorizer.transform(X_test)
     preds = classifier.predict(X_test_vec)

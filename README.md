@@ -49,7 +49,7 @@ Open `http://127.0.0.1:8000`.
 ./venv/bin/python -m classifier.rss_collect --per-class 40
 ```
 
-### Train classification model (TF-IDF + MultinomialNB)
+### Train classification model (TF-IDF + ComplementNB, balanced)
 
 ```sh
 ./venv/bin/python -m classifier.train
@@ -72,5 +72,4 @@ Weekly crawl scripts:
 ## Configuration
 
 Crawler defaults are in `search_engine/config.py` (user-agent, delay, max pages).
-
 
